@@ -22,8 +22,12 @@ public class ScoreCalculation : MonoBehaviour
             score ++;
             //show new score
             uIScore.text = score.ToString();
+      
+            //play sound
+            col.gameObject.GetComponent<AudioSource> ().Play();
             //hide coin or destroy it 
             col.gameObject.SetActive(false);
+
         }
     }
 }
